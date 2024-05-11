@@ -14,8 +14,8 @@ body {
 }
 
 .board {
-  width: 100px;
-  height: 100px;
+  width: 100vw;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -94,10 +94,8 @@ body {
 
 .cell.circle::before,
 .cell.circle::after,
-.board.circle
-  .cell:not(.x):not(.circle):hover::before
-  .board.circle
-  .cell:not(.x):not(.circle):hover::after {
+.board.circle .cell:not(.x):not(.circle):hover::before,
+.board.circle .cell:not(.x):not(.circle):hover::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -120,8 +118,8 @@ body {
   display: none;
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
